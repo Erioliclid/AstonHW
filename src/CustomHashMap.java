@@ -1,12 +1,14 @@
 
-public class CustomHashMap<K, V> {
+public class CustomHashMap<K, V> implements CustomMap<K,V> {
     private Node<K, V>[] table;
     private int size;
     private int threshold;
     private float loadFactor;
+    private static final int DEFAULT_INITIAL_CAPACITY = 16;
+    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
     public CustomHashMap() {
-        this(16, 0.75f);
+        this(DEFAULT_INITIAL_CAPACITY, DEFAULT_LOAD_FACTOR);
     }
 
     public CustomHashMap(int initCapacity, float loadFactor) {
@@ -110,6 +112,7 @@ public class CustomHashMap<K, V> {
             current = current.next;
         }
     }
+
     public int size() {
         return size;
     }

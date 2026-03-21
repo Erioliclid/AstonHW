@@ -2,7 +2,7 @@
 
 public class Main {
     public static void main(String[] args) {
-        CustomHashMap<Integer,String> chm = new CustomHashMap();
+        CustomHashMap<Integer,String> chm = new CustomHashMap<>();
         chm.put(0,"Hello");
         chm.put(1,"World");
 
