@@ -1,3 +1,4 @@
+package HW1;
 
 public class CustomHashMap<K, V> implements CustomMap<K,V> {
     private Node<K, V>[] table;
